@@ -3,7 +3,6 @@ package com.github.appreciated;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.HtmlImport;
-import com.vaadin.flow.component.html.Div;
 
 @Tag("iron-collapse")
 @HtmlImport("bower_components/iron-collapse/iron-collapse.html")
@@ -29,28 +28,28 @@ public class IronCollapse extends Component {
         getElement().callFunction("updateSize", animated);
     }
 
-    public void setHorizontal(boolean horizontal) {
-        getElement().setProperty("horizontal", horizontal);
-    }
-
     public boolean getHorizontal() {
         return getElement().getProperty("horizontal", false);
     }
 
-    public void setNoAnimation(boolean noAnimation) {
-        getElement().setProperty("noAnimation", noAnimation);
+    public void setHorizontal(boolean horizontal) {
+        getElement().setProperty("horizontal", horizontal);
     }
 
     public boolean getNoAnimation() {
         return getElement().getProperty("noAnimation", false);
     }
 
-    public void setOpened(boolean opened) {
-        getElement().setProperty("opened", opened);
+    public void setNoAnimation(boolean noAnimation) {
+        getElement().setProperty("noAnimation", noAnimation);
     }
 
     public boolean getOpened() {
         return getElement().getProperty("opened", false);
+    }
+
+    public void setOpened(boolean opened) {
+        getElement().setProperty("opened", opened);
     }
 
 }
