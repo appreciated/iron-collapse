@@ -1,12 +1,13 @@
 package com.github.appreciated;
 
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.HtmlImport;
 
 @Tag("iron-collapse")
 @HtmlImport("bower_components/iron-collapse/iron-collapse.html")
-public class IronCollapse extends Component {
+public class IronCollapse extends Component implements HasSize {
 
     public IronCollapse(Component content) {
         getElement().appendChild(content.getElement());
