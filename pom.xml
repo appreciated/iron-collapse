@@ -5,7 +5,7 @@
 
     <groupId>com.github.appreciated</groupId>
     <artifactId>iron-collapse</artifactId>
-    <version>0.7</version>
+    <version>0.8</version>
     <name>Iron Collapse</name>
     <description>Integration of iron-collapse for Vaadin platform</description>
 
