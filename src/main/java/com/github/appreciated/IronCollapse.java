@@ -1,16 +1,22 @@
 package com.github.appreciated;
 
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.HtmlImport;
 
 @Tag("iron-collapse")
 @HtmlImport("bower_components/iron-collapse/iron-collapse.html")
-public class IronCollapse extends Component implements HasSize {
+public class IronCollapse extends Component implements HasSize, HasComponents {
 
     public IronCollapse(Component content) {
-        getElement().appendChild(content.getElement());
+        this();
+        add(content);
+    }
+
+    public IronCollapse() {
+        this.getElement().getStyle().set("margin", "unset");
     }
 
     public void toggle() {
