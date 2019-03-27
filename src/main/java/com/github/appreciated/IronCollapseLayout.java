@@ -20,7 +20,12 @@ public class IronCollapseLayout extends PolymerTemplate<TemplateModel> implement
 
     public IronCollapseLayout(Component toggle, Component content) {
         add(toggle);
-        ironCollapse.add(content);
+        addCollpasableContent(content);
+    }
+
+    public void addCollpasableContent(Component component) {
+        add(component);
+        component.getElement().setAttribute("slot", "collapsible");
     }
 
     public IronCollapse getIronCollapse() {

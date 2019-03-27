@@ -9,9 +9,9 @@
             }
         </style>
         <slot id="toggle"></slot>
-        <slot name="collapsible">
-            <iron-collapse id="collapse"></iron-collapse>
-        </slot>
+        <iron-collapse id="collapse">
+            <slot name="collapsible"></slot>
+        </iron-collapse>
     </template>
     <script>
         class IronCollapseLayout extends Polymer.Element {
