@@ -1,5 +1,5 @@
 <link href="../../../../../bower_components/polymer/polymer-element.html" rel="import">
-<link rel="import" href="../../../../../bower_components/iron-collapse/iron-collapse.html">
+<link href="../../../../../bower_components/iron-collapse/iron-collapse.html" rel="import">
 
 <dom-module id="iron-collapse-layout">
     <template>
@@ -8,7 +8,9 @@
 
             }
         </style>
-        <slot id="toggle"></slot>
+        <div id="toggle">
+            <slot></slot>
+        </div>
         <iron-collapse id="collapse">
             <slot name="collapsible"></slot>
         </iron-collapse>
