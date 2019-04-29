@@ -19,8 +19,14 @@
             connectedCallback() {
                 super.connectedCallback();
                 var root = this.shadowRoot;
+                var rootElement = this;
                 root.querySelector("#toggle").onclick = function () {
                     root.querySelector("#collapse").toggle();
+                    if (root.querySelector("#collapse").opened) {
+                        rootElement.toggleAttribute("opened");
+                    } else {
+                        rootElement.removeAttribute("opened");
+                    }
                 }
             }
         }
