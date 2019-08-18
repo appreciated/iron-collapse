@@ -4,10 +4,12 @@ import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
-import com.vaadin.flow.component.dependency.HtmlImport;
+import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.dependency.NpmPackage;
 
 @Tag("iron-collapse")
-@HtmlImport("bower_components/iron-collapse/iron-collapse.html")
+@NpmPackage(value = "@polymer/iron-collapse", version = "3.0.1")
+@JsModule("@polymer/iron-collapse/iron-collapse.js")
 public class IronCollapse extends Component implements HasSize, HasComponents {
 
     public IronCollapse(Component content) {
@@ -20,19 +22,19 @@ public class IronCollapse extends Component implements HasSize, HasComponents {
     }
 
     public void toggle() {
-        getElement().callFunction("toggle");
+        getElement().callJsFunction("toggle");
     }
 
     public void show() {
-        getElement().callFunction("show");
+        getElement().callJsFunction("show");
     }
 
     public void hide() {
-        getElement().callFunction("hide");
+        getElement().callJsFunction("hide");
     }
 
     public void updateSize(String size, boolean animated) {
-        getElement().callFunction("updateSize", animated);
+        getElement().callJsFunction("updateSize", animated);
     }
 
     public boolean getHorizontal() {

@@ -4,14 +4,16 @@ import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
-import com.vaadin.flow.component.dependency.HtmlImport;
+import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.templatemodel.TemplateModel;
 
 @Tag("iron-collapse-layout")
-@HtmlImport("frontend://src/com/github/appreciated/iron-collapse/iron-collapse-layout.html")
+@NpmPackage(value = "@polymer/iron-collapse", version = "3.0.1")
+@JsModule("./com/github/appreciated/iron-collapse/iron-collapse-layout.js")
 public class IronCollapseLayout extends PolymerTemplate<TemplateModel> implements HasComponents, HasSize {
 
     @Id("collapse")
